@@ -1,4 +1,4 @@
-Commands for different operation
+Commands for different operations
 
 1. For Synonyms of a word
     node index.js dict syn <word>

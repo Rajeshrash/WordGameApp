@@ -1,4 +1,4 @@
-Commands for different operation
+Commands for different operations
 
 1. For Synonyms of a word
     node index.js dict syn <word>
@@ -13,7 +13,7 @@ Commands for different operation
     node index.js dict ex <word>
 
 5. For getting all the above details
-    node index.js dict <word> or 1. node index.js dict dict <word>
+    node index.js dict <word> or node index.js dict dict <word>
     
 6. For word game
     node index.js dict play

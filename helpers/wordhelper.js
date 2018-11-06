@@ -188,7 +188,16 @@ let playWordGame = async() => {
 }
 
 let getAllDetails = async(word) =>{
-        let dictDetails={}
+      try {
+        await getDictDetails(word);
+      }  
+      catch(e){
+          console.error(e);
+      }
+}
+
+let getDictDetails = async(word)=>{
+    let dictDetails={}
         try{
             dictDetails.definitions = await getDefinitionHelper(word);
         }
@@ -214,6 +223,17 @@ let getAllDetails = async(word) =>{
             dictDetails.examples = []
         }
         prettyPrint(dictDetails);
+}
+
+let getWordOfTheDay =async() =>{
+    try{
+        let rand_word = await getRandomWord();
+        console.log("The word of the day is: "+rand_word);
+        await getDictDetails(rand_word);
+    }
+    catch(e){
+        console.error(e);
+    }
 }
 
 let prettyPrint=(result) =>{
@@ -264,5 +284,6 @@ module.exports = {
     getRandomWord,
     playWordGame,
     getAllDetails,
-    prettyPrint
+    prettyPrint,
+    getWordOfTheDay
 }

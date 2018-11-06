@@ -42,7 +42,11 @@ if(process.argv[2]=="dict" && process.argv[3])
             else
                 console.log("Invalid input");
             break;
-    }   
+    }
+      
+}
+else if(process.argv[2]=='dict' && !process.argv[3]){
+      wordCtrl.getWordOfTheDay();  
 }
 
 

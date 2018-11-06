@@ -17,3 +17,6 @@ Commands for different operation
     
 6. For word game
     node index.js dict play
+
+7. For word of the day
+    node index.js dict

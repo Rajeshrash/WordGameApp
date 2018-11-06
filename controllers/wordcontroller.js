@@ -53,6 +53,15 @@ let getAllDetails = async(word)=>{
    }   
 }
 
+let getWordOfTheDay =async () =>{
+    try{
+        await wordHelper.getWordOfTheDay();
+    }
+    catch(e){
+        console.error(e);
+    }
+}
+
 let playWordGame = () => {
     wordHelper.playWordGame();
 }
@@ -64,4 +73,5 @@ module.exports ={
     getExamplesForWord,
     getAllDetails,
     playWordGame,
+    getWordOfTheDay
 }
